@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <style>
+    .container {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    .center {
+      margin: auto;
+      width: 60%;
+      text-align: center;
+      padding: 10px;
+      border-radius: 20px;
+    }
+
+    @media only screen and (max-width: 1200px) {
+      .center {
+        width: 100%;
+      }
+    }
+
+    .about {
+      width: 50%;
+      text-align: justify;
+      margin: auto;
+    }
+
+    .logo {
+      border-radius: 20px;
+    }
+
+    .wrapper {
+      display: inline-flex;
+      list-style: none;
+    }
+    .wrapper .icon {
+      position: relative;
+      background: #ffffff;
+      border-radius: 50%;
+      padding: 15px;
+      margin: 10px;
+      width: 50px;
+      height: 50px;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .wrapper .tooltip {
+      position: absolute;
+      top: 0;
+      font-size: 14px;
+      background: #ffffff;
+      color: #ffffff;
+      padding: 5px 8px;
+      border-radius: 5px;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .wrapper .tooltip::before {
+      position: absolute;
+      content: "";
+      height: 8px;
+      width: 8px;
+      background: #ffffff;
+      bottom: -3px;
+      left: 50%;
+      transform: translate(-50%) rotate(45deg);
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .wrapper .icon:hover .tooltip {
+      top: -45px;
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .wrapper .icon:hover span,
+    .wrapper .icon:hover .tooltip {
+      text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    .wrapper .email:hover,
+    .wrapper .email:hover .tooltip,
+    .wrapper .email:hover .tooltip::before {
+      background: #1877F2;
+      color: #ffffff;
+    }
+
+    .wrapper .telegram:hover,
+    .wrapper .telegram:hover .tooltip,
+    .wrapper .telegram:hover .tooltip::before {
+      background: #1DA1F2;
+      color: #ffffff;
+    }
+
+    .wrapper .discord:hover,
+    .wrapper .discord:hover .tooltip,
+    .wrapper .discord:hover .tooltip::before {
+      background: #5662F6;
+      color: #ffffff;
+    }
+
+    .wrapper .github:hover,
+    .wrapper .github:hover .tooltip,
+    .wrapper .github:hover .tooltip::before {
+      background: #333333;
+      color: #ffffff;
+    }
+
+    .wrapper .youtube:hover,
+    .wrapper .youtube:hover .tooltip,
+    .wrapper .youtube:hover .tooltip::before {
+      background: #CD201F;
+      color: #ffffff;
+    }
+
+    .wrapper .qiwi:hover,
+    .wrapper .qiwi:hover .tooltip,
+    .wrapper .qiwi:hover .tooltip::before {
+      background: #FF8C00;
+      color: #ffffff;
+    }
+  </style>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Обо мне</title>
+  <link rel="icon" href="img/logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+  <link rel="stylesheet" href="css/mdb.min.css" />
+  <meta content="Artem Bay" property="og:title" />
+  <meta content="Это страница обо мне" property="og:description" />
+  <meta content="https://cdn.discordapp.com/avatars/356737308898099201/c3ab0f032bb6503dd9a3124ca22c6475.png?size=1024"
+    property="og:image" />
+  <meta content="#ff9d5b" data-react-helmet="true" name="theme-color" />
+  <script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(88942766, "init", {
+         clickmap:true,
+         trackLinks:true,
+         accurateTrackBounce:true,
+         webvisor:true
+    });
+ </script>
+ <noscript><div><img src="https://mc.yandex.ru/watch/88942766" style="position:absolute; left:-9999px;" alt="" /></div></noscript>     
+ <script src="https://kit.fontawesome.com/3e58c377ff.js" crossorigin="anonymous"></script>
+ <style>
+    body{animation: 3s ease-out 0s 1 FadeIn;}
+    @keyframes FadeIn {
+        0% {
+          opacity:0;
+        }
+        100% {
+          opacity:1;
+        }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="center shadow-6">
+      <a href="https://artembay.tk/artem"><img style="border-radius: 100%" src="https://cdn.discordapp.com/avatars/813058513294721025/941aa22fab555e6fbcd74e74623978cb.png?size=4096" alt="" width="256" height="256"></a>
+      <h1 style="padding: 30px;">Привет! Меня зовут Миф</h1>
+      <div class="about">
+        <p>Я родился и живу в России. Я Python и Web разработчик. Создаю дискорд ботов. Люблю поиграть в майнкрафт</p>
+      </div>
+      <ul class="wrapper">
+        <a class="icon email" href="mailto:admin@artembay.site">
+        <span class="tooltip">admin@artembay.site</span>
+        <span><i class="fa-solid fa-at"></i></span>
+        </a>
+        <a class="icon telegram" href="tg://resolve?domain=psychomefedron">
+        <span class="tooltip">@artembay1</span>
+        <span><i class="fa-brands fa-telegram"></i></span>
+        </a>
+        <a class="icon discord" href="https://discord.com/users/813058513294721025/">
+        <span class="tooltip">Artem&nbsp;Bay#0547</span>
+        <span><i class="fa-brands fa-discord"></i></span>
+        </a>
+        <a class="icon github" href="https://github.com/mithorig">
+        <span class="tooltip">ArtemBay</span>
+        <span><i class="fab fa-github" aria-hidden="true"></i></span>
+        </a>
+        <a class="icon youtube" href="https://www.youtube.com/channel/UC_0-VUODzB3YzrToU5KJyww">
+        <span class="tooltip">ArtemBay</span>
+        <span><i class="fab fa-youtube" aria-hidden="true"></i></span>
+        </a>
+        <!--<a class="icon qiwi" href="https://qiwi.com/payment/form/99999?blocked%5B0%5D=account&amountFraction=0&extra%5B%27account%27%5D=ARTEMBAY&amountInteger=99&blocked%5B0%5D=sum&currency=RUB">
+        <span class="tooltip">ArtemBay</span>
+        <span><i class="rm-icon-qiwi" aria-hidden="true"></i></span>
+        </a>-->
+        </ul>
+        <footer><p>© 2022, mith. Защищено лицензией Mozilla Public License 2.0. </p></footer>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <script type="text/javascript"></script>
+</body>
+
+</html>
